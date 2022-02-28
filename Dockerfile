@@ -23,3 +23,8 @@ ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 # Install yarn
 RUN npm install -g yarn
+
+# Install
+COPY . /app
+WORKDIR /app
+RUN yarn
